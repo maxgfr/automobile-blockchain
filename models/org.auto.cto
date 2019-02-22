@@ -41,38 +41,43 @@ participant Client identified by clientId {
   o String clientId
   o String firstName
   o String lastName
-  o String adress
+  o String address
 }
 
 asset Loan identified by loanId {
   o String loanId
-  --> Client client
-  --> Banker banker
+  o String priceLoan
+  o Boolean loanAccepted
 }
 
 asset Insurance identified by insuranceId {
   o String insuranceId
   o String type
-  --> Client client
-  --> Insurer insurer
+  o Boolean insuranceAccepted
 }
 
 asset Vehicle identified by vehicleId {
   o String vehicleId
-  --> Client client
-  --> Producer producer
+  o String type
+  o String price
+  o String timeLimit
   o Boolean loanAccepted
-  o Boolean insuranceAccepted
 }
 
-transaction VehicleTransaction {
+transaction OrderTransaction {
   --> Vehicle asset
+  --> Client client
+  --> Producer producer
 }
 
 transaction LoanTransaction {
   --> Loan asset
+  --> Client client
+  --> Banker banker
 }
 
 transaction InsuranceTransaction {
   --> Insurance asset
+  --> Client client
+  --> Insurer insurer
 }
