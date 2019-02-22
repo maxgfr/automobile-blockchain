@@ -18,25 +18,61 @@
 
 namespace org.auto
 
-participant SampleParticipant identified by participantId {
-  o String participantId
+participant Client identified by clientId {
+  o String clientId
   o String firstName
   o String lastName
+  o String adress
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  --> SampleParticipant owner
-  o String value
+participant Insurer identified by insurerId {
+  o String insurerId
 }
 
-transaction SampleTransaction {
-  --> SampleAsset asset
-  o String newValue
+participant Banker identified by bankerId {
+  o String bankerId
 }
 
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
+participant Producer identified by producerId {
+  o String producerId
+}
+
+participant Client identified by clientId {
+  o String clientId
+  o String firstName
+  o String lastName
+  o String adress
+}
+
+asset Loan identified by loanId {
+  o String loanId
+  --> Client client
+  --> Banker banker
+}
+
+asset Insurance identified by insuranceId {
+  o String insuranceId
+  o String type
+  --> Client client
+  --> Insurer insurer
+}
+
+asset Vehicle identified by vehicleId {
+  o String vehicleId
+  --> Client client
+  --> Producer producer
+  o Boolean loanAccepted
+  o Boolean insuranceAccepted
+}
+
+transaction VehicleTransaction {
+  --> Vehicle asset
+}
+
+transaction LoanTransaction {
+  --> Loan asset
+}
+
+transaction InsuranceTransaction {
+  --> Insurance asset
 }
