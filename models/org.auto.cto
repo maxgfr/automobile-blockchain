@@ -22,62 +22,77 @@ participant Client identified by clientId {
   o String clientId
   o String firstName
   o String lastName
-  o String adress
+  o String address
 }
 
 participant Insurer identified by insurerId {
   o String insurerId
+  o String name
 }
 
-participant Banker identified by bankerId {
-  o String bankerId
+participant Bank identified by bankId {
+  o String bankId
+  o String name
 }
 
-participant Producer identified by producerId {
-  o String producerId
-}
-
-participant Client identified by clientId {
-  o String clientId
-  o String firstName
-  o String lastName
-  o String address
-}
-
-asset Loan identified by loanId {
-  o String loanId
-  o String priceLoan
-  o Boolean loanAccepted
-}
-
-asset Insurance identified by insuranceId {
-  o String insuranceId
-  o String type
-  o Boolean insuranceAccepted
+participant Manufacturer identified by manufacturerId {
+  o String manufacturerId
+  o String name
 }
 
 asset Vehicle identified by vehicleId {
   o String vehicleId
-  o String type
-  o String price
-  o String timeLimit
-  o Boolean loanAccepted
+  o String type optional
+  o String price optional
+  o String timeLimit optional
+  o Boolean loanAccepted optional
+  o VehicleStatus status
+  --> Client owner optional
+  --> Manufacturer manufacturer
+}
+
+enum VehicleStatus {
+  o NOT_SOLD
+  o SOLD
+}
+
+asset Loan identified by loanId {
+  o String loanId
+  o String monthlyPrice optional
+  o String monthDuration optional
+  o String totalAmount optional
+  o Boolean accepted optional
+  --> Client client optional
+  --> Bank bank
+}
+
+asset Insurance identified by insuranceId {
+  o String insuranceId
+  o String type optional
+  o Boolean accepted optional
+  o String monthlyPrice optional
+  o String monthDuration optional
+  --> Client client optional
+  --> Insurer insurer
 }
 
 transaction OrderTransaction {
   --> Vehicle asset
   --> Client client
-  --> Producer producer
+  --> Manufacturer manufacturer
 }
 
 transaction LoanTransaction {
   --> Loan asset
   --> Client client
-  --> Banker banker
+  --> Bank bank
 }
 
 transaction InsuranceTransaction {
   --> Insurance asset
   --> Client client
   --> Insurer insurer
+}
+
+transaction SetupDemo {
 }
