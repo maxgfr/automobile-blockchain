@@ -23,6 +23,9 @@ participant Client identified by clientId {
   o String firstName
   o String lastName
   o String address
+  --> Vehicle[] vehicles optional
+  --> Loan[] loans optional
+  --> Insurance[] insurances optional
 }
 
 participant Insurer identified by insurerId {
@@ -45,9 +48,8 @@ asset Vehicle identified by vehicleId {
   o String type optional
   o String price optional
   o String timeLimit optional
-  o Boolean loanAccepted optional
   o VehicleStatus status
-  --> Client owner optional
+  --> Client[] owners optional
   --> Manufacturer manufacturer
 }
 
@@ -77,21 +79,20 @@ asset Insurance identified by insuranceId {
 }
 
 transaction OrderTransaction {
-  --> Vehicle asset
+  --> Vehicle vehicle
   --> Client client
-  --> Manufacturer manufacturer
 }
 
 transaction LoanTransaction {
-  --> Loan asset
+  --> Loan loan
   --> Client client
-  --> Bank bank
+  o Boolean accepted
 }
 
 transaction InsuranceTransaction {
-  --> Insurance asset
+  --> Insurance insurance
   --> Client client
-  --> Insurer insurer
+  o Boolean accepted
 }
 
 transaction SetupDemo {
