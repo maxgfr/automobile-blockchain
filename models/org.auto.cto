@@ -45,7 +45,10 @@ participant Manufacturer identified by manufacturerId {
 
 asset Vehicle identified by vehicleId {
   o String vehicleId
-  o String type optional
+  o String model optional
+  o String gearbox optional
+  o String energy optional
+  o String usage optional
   o String price optional
   o String timeLimit optional
   o VehicleStatus status
