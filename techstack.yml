@@ -1,0 +1,126 @@
+repo_name: maxgfr/automobile-blockchain
+report_id: 3200c0c845a207c71cd271dabf616331
+repo_type: Public
+timestamp: '2023-11-10T09:44:29+00:00'
+requested_by: maxgfr
+provider: github
+branch: master
+detected_tools_count: 10
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: Chai
+  description: A BDD / TDD assertion library
+  website_url: http://chaijs.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1725/chai.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: chai-as-promised
+  description: Extends Chai with assertions about promises
+  package_url: https://www.npmjs.com/chai-as-promised
+  license: WTFPL
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15970/default_cbd6c289400672b291755183817e9dd6abe1a612.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: cucumber
+  description: The official JavaScript implementation of Cucumber
+  package_url: https://www.npmjs.com/cucumber
+  version: 2.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17075/default_50357c490b205882dcfb608fd3c74b446186c21e.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: mkdirp
+  description: Recursively mkdir, like `mkdir -p`
+  package_url: https://www.npmjs.com/mkdirp
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15881/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
+- name: nyc
+  description: The Istanbul command line interface
+  package_url: https://www.npmjs.com/nyc
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15837/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source: package.json
+  last_updated_by: "@maxgfr"
+  last_updated_on: 2019-02-14 14:53:58.000000000 Z
